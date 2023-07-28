@@ -12,6 +12,6 @@ export class HeaderComponent {
 
   navigate(){
 
-    this.r.navigate(['/home',5])
+    this.r.navigate(['/home'])
   }
 }

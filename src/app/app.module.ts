@@ -11,15 +11,22 @@ import { ProductComponent } from './product/product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './header/header.component';
 
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { Homechild1Component } from './homechild1/homechild1.component';
+
 const routes:Routes=[
   {
     path:'',component:HomeComponent
   } ,
   {
-    path:'home/:id',component:HomeComponent
+    path:'home',component:HomeComponent
+  }
+  {
+    path:'contact',component:ContactComponent
   },
   {
-    path:'products',component:ProductComponent
+    path:'about',component:AboutComponent
   } ,
   {
     path:'**',component:NotFoundComponent
@@ -35,6 +42,10 @@ const routes:Routes=[
     ProductComponent,
     NotFoundComponent,
     HeaderComponent,
+   
+    ContactComponent,
+    AboutComponent,
+    Homechild1Component,
    
   ],
   imports: [
