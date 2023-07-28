@@ -14,14 +14,24 @@ import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { Homechild1Component } from './homechild1/homechild1.component';
+import { Homechild2Component } from './homechild2/homechild2.component';
 
 const routes:Routes=[
   {
     path:'',component:HomeComponent
   } ,
   {
-    path:'home',component:HomeComponent
-  }
+    path:'home',component:HomeComponent,
+    children:
+    [ 
+      {
+      path:'homechild1',component:Homechild1Component
+      },
+      {
+        path:'homechild2',component:Homechild2Component
+        }
+    ]
+  },
   {
     path:'contact',component:ContactComponent
   },
@@ -42,10 +52,9 @@ const routes:Routes=[
     ProductComponent,
     NotFoundComponent,
     HeaderComponent,
-   
     ContactComponent,
     AboutComponent,
-    Homechild1Component,
+    Homechild2Component,
    
   ],
   imports: [
