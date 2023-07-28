@@ -16,6 +16,9 @@ const routes:Routes=[
     path:'',component:HomeComponent
   } ,
   {
+    path:'home/:id',component:HomeComponent
+  },
+  {
     path:'products',component:ProductComponent
   } ,
   {
